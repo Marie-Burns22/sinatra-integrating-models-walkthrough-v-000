@@ -28,4 +28,18 @@ class TextAnalyzer
       arr2[c] = arr.count(c)
     end
     
-    biggest = {arr2.keys.first =>
+    biggest = {arr2.keys.first => arr2.values.first }
+    
+    arr2.each do |key, value|
+      if value > biggest.values.first 
+        biggest = {}
+        biggest[key] = value 
+      end
+    end
+    
+    biggest
+  end
+end
+    
+    
+    
