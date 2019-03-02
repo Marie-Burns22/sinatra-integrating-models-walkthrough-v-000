@@ -19,4 +19,11 @@ class TextAnalyzer
   end 
   
   def most_used_letter
-    sl = text.gsub(/[^])
+    sl = text.gsub(/[^a-z]/,'')
+    arr = sl.split('')
+    arr1 = arr.uniq 
+    arr2 = {}
+    
+    arr1.map do |c|
+      arr2[c] = arr.count(c)
+    end
